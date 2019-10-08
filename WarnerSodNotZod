@@ -7,6 +7,7 @@
 
 
 
+
 package edu.cpt167.warner.participation6;
 
 //import Scanner object
@@ -294,15 +295,33 @@ public class warnerNewSodNotZod3
 			return borrowedHowManyEach;
 		}//END of validation method for HowManyEach
 		//displayItemReceipt void 
-		public static void displayItemReceipt(String borrowedUserName, double borrowedOrigPrice, double borrowedDiscountPrice, double borrowedHowMany,
+		public static void displayItemReceipt(String borrowedUserName, double borrowedItemPrice, double borrowedDiscountPrice, double borrowedHowMany,
 				double borrowedSubTotal, double borrowedTax, double borrowedTotalCost)
 		{
 			//displayItemReceipt column form and formatting
+			System.out.println( "Here is your detailed reciept," +borrowedUserName);
+			System.out.println("************************************************************");
+			//itemPrice
+			System.out.printf("%-16s%-3s%-20.2f\n","Price:","$",borrowedItemPrice);
+			//discountPrice
+			System.out.printf("%-16s%-3s%-20.2f\n","Discount Price:","$",borrowedDiscountPrice);
+			//howMany
+			System.out.printf("%-16s%-3s%-20.2f\n","How Many:","",borrowedHowMany);
+			//subTotal
+			System.out.printf("%-16s%-3s%-20.2f\n","Sub Total:","$",borrowedSubTotal);
+			//tax
+			System.out.printf("%-16s%-3s%-20.2f\n","Tax:","$",borrowedTax);
+			//totalCost
+			System.out.printf("%-16s%-3s%-20.2f\n","Total:","$",borrowedTotalCost);
+			System.out.print("************************************************************\n");
 		}//End of displayItemReceipt
 		//displayCustomerReport column form and formatting
 		public static void displayCustomerReport(double borrowedHowMany, double borrowedCostumerTotal)
 		{
-			
+			//howMany
+			System.out.printf("%-16s%-3s%-20.2f\n","How Many:","",borrowedHowMany);
+			//howMany
+			System.out.printf("%-16s%-3s%-20.2f\n","How Many:","",borrowedCostumerTotal);
 		}//END of displayCostumerCount in column form
 		//displayFinalReport column form and proper formating
 		public static void displayFinalReport(String borrowedUserName,double borrowedMemberCount, double 
@@ -326,7 +345,7 @@ public class warnerNewSodNotZod3
 		public static void displayErrorMessage()
 		{
 			System.out.print("SELECTION IS INVALID! Please Re-Enter...\n");
-			//modift LVC ask for selection again
+			//modify LVC ask for selection again
 			System.out.print("Enter your selection here...\n");
 		}
 	}//END of class
